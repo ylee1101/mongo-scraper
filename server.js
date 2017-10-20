@@ -1,12 +1,12 @@
 // dependencies
 var express = require("express");
-var mongojs = requre("mongojs");
+var mongojs = require("mongojs");
 var bodyParser = require('body-parser');
 var morgan = require("morgan");
 var mongoose = require('mongoose');
 
 // for Note and Article model files
-var Note = require("./model/Notes.js");
+var Note = require("./models/Note.js");
 var Article = require("./models/Article.js");
 
 // Set mongoose to leverage built in JavaScript ES6 Promises

@@ -9,8 +9,8 @@ var mongoose = require("mongoose");
 mongoose.Promise = Promise;
 
 // for Note and Article model files
-var note = require("../models/note.js");
-var article = require("../models/article.js");
+var note = require("../models/Note.js");
+var article = require("../models/Article.js");
 
 router.get("/", function(req, res) {
   res.render("index");
@@ -44,7 +44,7 @@ router.post("/scrape", function(req, res){
         var scrapedArticles = {};
 
         // grab every <h2 class ="story-heading"> !!CHECK!! if story-heading doesnt work, try article h2 or h2
-        $("story-heading").each(function(i, element){
+        $("article h2").each(function(i, element){
             // save an empty result object
             var result = {};
 
