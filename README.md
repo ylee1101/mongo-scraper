@@ -1,5 +1,7 @@
 # mongo-scraper
 
+control F "CHECK" if app is not working and change it
+
 Overview
 
 In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.
@@ -13,7 +15,7 @@ mongoose
 body-parser
 cheerio
 request
-NOTE: If you want to earn complete credit for your work, you must use all six of these packages in your assignment.
+
 In order to deploy your project to Heroku, you must set up an mLab provision. mLab is remote MongoDB database that Heroku supports natively. Follow these steps to get it running:
 Create a Heroku app in your project directory.
 Run this command in your Terminal/Bash window:
@@ -57,4 +59,3 @@ Hosting on Heroku
 
 Now that we have a backend to our applications, we use Heroku for hosting. Please note that while Heroku is free, it will request credit card information if you have more than 5 applications at a time or are adding a database.
 Please see Heroku’s Account Verification Information for more details.
-One Last Thing
