@@ -1,6 +1,6 @@
 // dependencies
 var express = require("express");
-var mongojs = require("mongojs");
+// var mongojs = require("mongojs");
 var bodyParser = require('body-parser');
 var morgan = require("morgan");
 var mongoose = require('mongoose');
@@ -40,18 +40,28 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // connecting to mongodb
-mongoose.connect('mongodb:postmyherokuapplink');
+mongoose.connect('mongodb:localhost:3000');
 
 // notification when app is connected or error
 var db = mongoose.connection;
 
-// for any mongoose errors
-db.on('error', console.error.bind(console, 'connection error:'));
-
-// for logging successful message
-db.once('open', function() {
-    console.log("mongoose connection successful");
+// Show any mongoose errors
+db.on("error", function(error) {
+    console.log("Mongoose Error: ", error);
 });
+  
+  // Once logged in to the db through mongoose, log a success message
+db.once("open", function() {
+    console.log("Mongoose connection successful.");
+});
+
+// // for any mongoose errors
+// db.on('error', console.error.bind(console, 'connection error:'));
+
+// // for logging successful message
+// db.once('open', function() {
+//     console.log("mongoose connection successful");
+// });
 
 // import routes
 var routes = require("./controllers/scraper_controller.js");

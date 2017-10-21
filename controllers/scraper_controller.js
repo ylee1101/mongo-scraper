@@ -51,7 +51,7 @@ router.post("/scrape", function(req, res){
             // add the text and href of link and save them as properties of the result object
             result.title = $(this).children("a").text();
 
-            console.log("What is the result title?" + result.title);
+            console.log("What is the result title? " + result.title);
 
             result.link = $(this).children("a").attr("href");
 
@@ -208,3 +208,4 @@ router.post("/articles/:id", function(req, res) {
 
 // Export routes for server.js to use.
 module.exports = router;
+
