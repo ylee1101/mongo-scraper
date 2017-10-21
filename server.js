@@ -40,7 +40,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // connecting to mongodb
-mongoose.connect('mongodb:localhost:3000');
+mongoose.connect('mongodb://heroku_65242qm6:tsqjlntipi06rokeiok79hbfel@ds227865.mlab.com:27865/heroku_65242qm6');
 
 // notification when app is connected or error
 var db = mongoose.connection;

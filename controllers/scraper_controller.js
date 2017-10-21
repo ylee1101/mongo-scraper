@@ -9,8 +9,8 @@ var mongoose = require("mongoose");
 mongoose.Promise = Promise;
 
 // for Note and Article model files
-var note = require("../models/Note.js");
-var article = require("../models/Article.js");
+var Note = require("../models/Note.js");
+var Article = require("../models/Article.js");
 
 router.get("/", function(req, res) {
   res.render("index");
